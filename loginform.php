@@ -1,13 +1,11 @@
-<div class="row">
-  <h1>Inloggen</h1>
-</div>
+
 <div class="row">
   <div class="col-6">
     <form action="./index.php?content=login-script" method="post">
       <div class="form-group">
-        <label for="InputEmail">e-mailadres</label>
+        <label for="InputEmail">E-mailadres</label>
         <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp"
-          value="<?php if (isset($_GET['email'])) { echo $_GET['email'];} ?>" placeholder="Uw emailadres" name="email" required >
+          value="" placeholder="Uw emailadres" name="email" required >
       </div>
       <div class="form-group">
         <label for="InputPassword">Wachtwoord</label>

@@ -1,6 +1,3 @@
-<?php ob_start(); session_start(); ?>
-
-<!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -9,36 +6,22 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="./css/style.css" rel="stylesheet">
 
     <title>Rent A Student</title>
   </head>
   <body>
+    
+    <?php require_once "navbar.php"?>
 
-  <main class="container">
-    <div class="row">
-      <div class="col-12">
-        <?php include("./navbar.php"); ?>
-      </div>
-    </div>
+    <?php require_once "banner.php"?>
 
-    <div class="row">
-  <div class="col-12">
-    <section class="content">
-      <?php include("./navigation.php"); ?>
-    </section>
+  <div class="main">
+    <?php require_once "navigation.php"?>
   </div>
+
+  <?php //require_once "footer.php"?>
   
-</div>
-
-
-<div class="row">
-<div class="col-12">
-  <?php include("./footer.php"); ?>
-</section>
-</div>
-</div>
-    </main>
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
