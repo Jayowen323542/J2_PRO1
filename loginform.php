@@ -15,3 +15,8 @@
     </form>
   </div>
 </div>
+<div>
+<button type="button" class="btn btn-primary btn-lg">Login als Student</button>
+<button type="button" class="btn btn-primary btn-lg">Login als Bedrijf</button>
+<button type="button" class="btn btn-primary btn-lg">Login als Admin</button>
+</div>
