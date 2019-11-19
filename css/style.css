@@ -38,7 +38,7 @@ size: 15px;
     margin-bottom: 10px;
     background-color: lightgray;
     padding: 10px 20px;
-    height: 80%;
+    height: 82%;
     
    
   }
@@ -65,4 +65,8 @@ size: 15px;
     font-size: 30px;
     padding: 50px 0;
     
+  }
+
+  .center{
+    text-align: center;
   }

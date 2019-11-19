@@ -1,6 +1,6 @@
 
 <div class="row">
-  <div class="col-6">
+  <div class="col-4">
     <form action="./index.php?content=login-script" method="post">
       <div class="form-group">
         <label for="InputEmail">E-mailadres</label>
@@ -16,8 +16,19 @@
   </div>
 </div>
 <div>
-  <div>Dit is voor schermen </div>
-  <a href="./index.php?content=profiel"> 
-<button type="button" class="btn btn-primary btn-lg">Login</button>
+
+  <div>Dit is voor schermen. Log in als </div>
+  <div class="row col-5">
+  <div class="btn-group" role="group" aria-label="Basic example">
+  <a href="./index.php?content=student_home"> 
+<button type="button" class="btn btn-dark ">Student</button>
 </a>
+<a href="./index.php?content=company_home"> 
+<button type="button" class="btn btn-dark ">Bedrijf</button>
+</a>
+<a href="./index.php?content=admin_home"> 
+<button type="button" class="btn btn-dark ">Administrator</button>
+</a>
+</div>
+</div>
 </div>
