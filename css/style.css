@@ -38,8 +38,8 @@ size: 15px;
     margin-bottom: 10px;
     background-color: lightgray;
     padding: 10px 20px;
-    height: 82%;
-    
+    height: auto;
+    min-height:500px;
    
   }
   
