@@ -11,7 +11,7 @@
     <title>Rent A Student</title>
   </head>
   <body>
-    
+  
     <?php require_once "navbar.php"?>
 
     <?php require_once "banner.php"?>
@@ -20,7 +20,9 @@
     <?php require_once "navigation.php"?>
   </div>
 
-  <?php //require_once "footer.php"?>
+  
+
+ 
   
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
