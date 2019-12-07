@@ -22,18 +22,3 @@
 </div>
 <div>
 
-  <div>Dit is voor schermen. Log in als </div>
-  <div class="row col-5">
-  <div class="btn-group" role="group" aria-label="Basic example">
-  <a href="./index.php?content=student_home"> 
-<button type="button" class="btn btn-dark ">Student</button>
-</a>
-<a href="./index.php?content=company_home"> 
-<button type="button" class="btn btn-dark ">Bedrijf</button>
-</a>
-<a href="./index.php?content=admin_home"> 
-<button type="button" class="btn btn-dark ">Administrator</button>
-</a>
-</div>
-</div>
-</div>
