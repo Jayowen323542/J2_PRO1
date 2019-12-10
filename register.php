@@ -74,7 +74,7 @@
     echo '<div class="alert alert-success" role="alert">
             U heeft uw acount aangemaakt.
           </div>';
-    header("Refresh: 4000; url=./index.php?content=loginform");
+    header("Refresh: 4; url=./index.php?content=loginform");
   } else {
     echo '<div class="alert alert-danger" role="alert">
             Er is iets mis gegaan met de registratie, probeer het opnieuw.
