@@ -1,4 +1,8 @@
-<?php ob_start(); session_start(); ?>
+<?php ob_start(); session_start(); 
+include("./connect_db.php");
+include("./functions.php");
+
+?>
 <html lang="en">
   <head>
     <!-- Required meta tags -->

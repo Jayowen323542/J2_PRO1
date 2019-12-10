@@ -1,8 +1,5 @@
 <?php
-  // Maak contact met de mysql-server en database
-  include("./connect_db.php");
-  // Maak de sanitize() functie beschikbaar op deze pagina
-  include("./functions.php");
+
   // Maak de $_POST array waarden schoon
   $email = sanitize($_POST["email"]);
   $password = sanitize($_POST["password"]);
@@ -17,27 +14,40 @@
     if ( mysqli_num_rows($result) ==  1 ) {
       // Maak van het result een werkbaar associatief array
       $record = mysqli_fetch_assoc($result);
+      $iduser = $record["iduser"];
 
-      $sql2 = "SELECT * FROM `login`
-          WHERE `iduser` = '$record["iduser"]'";
+      $sql2 = "SELECT * FROM `rollen_link` 
+          WHERE `iduser` = '$iduser'";
       $result2 = mysqli_query($conn, $sql2);
       $record2 = mysqli_fetch_assoc($result2);
+
+      $userrole = $record2["idrollen"];
+      $sql3 = "SELECT * FROM `rollen` WHERE `idrollen` = '$userrole'";
+      $result3 = mysqli_query($conn, $sql3);
+      $record3 = mysqli_fetch_assoc($result3);
+
+
       // Haal het gehashte password uit de database (60 tekens lang)
       $db_password = $record["password"];
       // Kijk met password_verify of het ingevoerde wachtwoord matched met het gehashte wachtwoord uit de database
       if ( password_verify($password, $db_password) ) {
         // Stuur door naar homepage gebruikersrol
-
         $_SESSION["id"] = $record["iduser"];
         $_SESSION["email"] = $record["email"];
-        $_SESSION["userrole"] = $record2["userrole"];
-        switch ($record["userrole"]) {
+        $_SESSION["userrole"] = $record3["titel"];
+        switch ($_SESSION["userrole"]) {
         case 'administrator':
-          header("Location: ./index.php?content=contactadmin");
+          header("Location: ./index.php?content=gebruikersrollen");
           break;
-        case 'customer':
-          header("Location: ./index.php?content=items");
+        case 'bedrijf':
+          header("Location: ./index.php?content=company_home");
           break;
+          case 'student':
+            header("Location: ./index.php?content=student_home");
+            break;
+            case 'root':
+              header("Location: ./index.php?content=gebruikersrollen");
+              break;
         default:
           header("Location: ./index.php?content=home");
           break;
