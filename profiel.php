@@ -1,26 +1,26 @@
-
-
-
-
-
-
-<div class="row">Persoonlijke informatie</div>
+<?php
+//var_dump($_SESSION);
+$iduser = $_SESSION["id"];
+//var_dump($iduser);
+$result = mysqli_query($conn,"SELECT * FROM `student_gegvens` WHERE `iduser`= $iduser "); 
+while($row = mysqli_fetch_assoc($result)){
+echo '<div class="row">Persoonlijke informatie</div>
 <div class="row">
 <div class="col-3">
-Naam: Pieter van de Koning
+Naam: '. $row['naam'] .' '. $row['achternaam'] .'
 </div>
 <div class="col-3">
 
-Email: Pieter@student.mbou.nl
+Email: '. $row['email'] .'
 </div>
 </div>
 
 <div class="row">
 <div class="col-3">
-Woonplaats: Utrecht
+Woonplaats: '. $row['woonplaats'] .'
 </div>
 <div class="col-3">
-Adres: Straat 22
+Adres: '. $row['straat'] .' '. $row['huisnummer'] .'
 </div>
 </div>
 <div class="row">
@@ -30,8 +30,8 @@ School: MBOU
 </div>
 <br>
 
-<a href="./index.php?content=profiel"> 
-<button type="button" class="btn btn-dark btn-lg">Verander Gegevens</button>
+<a href="./index.php?content=profile_change">
+<button type="button" id="edit-profile" class="btn btn-dark btn-lg">Verander Gegevens</button>
 </a>
 <br>
 <br>
@@ -45,4 +45,6 @@ School: MBOU
     <span class="input-group-text" id="inputGroupFileAddon02">Upload CV</span>
   </div>
 </div>
-</div>
+</div>';
+}
+?>
