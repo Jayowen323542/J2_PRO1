@@ -4,12 +4,15 @@
 
 <?php
  $id = sanitize($_GET["id"]);
-$result = mysqli_query($conn,"SELECT * FROM `opdrachten_reacties` WHERE `idopdracht` = '$id'");
+ $sql2 = "SELECT * FROM `opdrachten_reacties` WHERE `idopdracht` = '$id'";
+$result = mysqli_query($conn,$sql2);
 $row2 = mysqli_fetch_assoc($result);
+echo $sql2;
 
 $iduser = $row2["iduser"];
 $sql = "SELECT * FROM `student_gegvens` WHERE `iduser` = '$iduser'";
 $result2 =  mysqli_query($conn,$sql);
+echo $sql;
 
 while($row = mysqli_fetch_assoc($result2)){
 echo "<div class='col-sm-3'><div class='card' style='width: 18rem;'>

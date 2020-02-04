@@ -20,7 +20,7 @@ WHERE `opdrachten`.`idopdracht` = '$id'";
 $result = mysqli_query($conn,$sql);
 
 echo '<div class="alert" role="alert">
-            Uw opdracht is aangemaakt
+            Uw opdracht is aangepast
           </div>';
     header("Refresh: 1; url=./index.php?content=company_home");
 

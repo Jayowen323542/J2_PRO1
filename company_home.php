@@ -2,7 +2,7 @@
 
 <?php
 $iduser = $_SESSION["id"];
-$result = mysqli_query($conn,"SELECT * FROM `opdrachten` WHERE `iduser` = '$iduser'");
+$result = mysqli_query($conn,"SELECT * FROM `opdrachten` WHERE `iduser` = '$iduser' AND `status` = 0");
 while($row = mysqli_fetch_assoc($result)){
 echo "<div class='col-sm-3'>
 <div class='card' style='width: 18rem;'>
@@ -35,4 +35,8 @@ echo "<div class='col-sm-3'>
   <br>
 <a href="./index.php?content=bedrijfmaakopdracht"> 
 <button type="button" class="btn btn-dark btn-lg">Nieuwe Opdracht aanmaken</button>
+</a>
+
+<a href="./index.php?content=geapreacties"> 
+<button type="button" class="btn btn-dark btn-lg">Zie geaccepteerde reacties</button>
 </a>

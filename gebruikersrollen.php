@@ -23,7 +23,7 @@ $result = mysqli_query($conn, $sql);
             <th scope="col">Email</th>
             <th scope="col">Aanmaak datum</th>
             <th scope="col">Wijzig datum</th>
-            <th scope="col">Zie meer</th>
+           
             <th scope="col">Verander Gebruikers Role</th>
             <th scope="col">Verwijder</th>
 
@@ -41,11 +41,7 @@ $result = mysqli_query($conn, $sql);
                      "<td>" . $record["createDate"] . "</td>" .
                      "<td>" . $record["updateDate"] . "</td>
 
-                     <td>
-                     <a href='./index.php?content=gebruikerinfo&id=". $record["iduser"] ."'>
-                     <img src='./img/cogwheel.png' alt='edit' style='width: 20px; height: 20px;'>
-                     </a>
-                     </td>
+                 
 
                     <td>
                         <a href='./index.php?content=update&id=". $record["iduser"] ."'>
